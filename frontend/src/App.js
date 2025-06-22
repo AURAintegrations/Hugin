@@ -5,25 +5,83 @@ import './App.css';
 import {
   Header,
   HeroSection,
-  AwardsSection,
-  StatsSection,
   FeaturesSection,
   LoginForm,
   DashboardSidebar,
   DashboardHeader,
-  DashboardOverview,
-  ContactsManagement
+  HuginOverview,
+  ConversationsModule,
+  ContentBoard,
+  ContentCalendar,
+  HuginAssistant
 } from './components';
 
-// Landing Page Component
+// Landing Page Component (Updated for Hugin)
 const LandingPage = ({ onLoginClick }) => {
   return (
     <div className="min-h-screen bg-white">
       <Header onLoginClick={onLoginClick} />
       <HeroSection />
-      <AwardsSection />
-      <StatsSection />
+      
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Organize Your Digital Life
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Hugin helps content creators, entrepreneurs, and professionals organize their online conversations and content ideas efficiently.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: "10,000+", label: "Conversations Saved" },
+              { number: "5,000+", label: "Content Ideas Organized" },
+              { number: "2,500+", label: "Posts Scheduled" },
+              { number: "95%", label: "User Satisfaction" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-white rounded-lg p-6 shadow-sm">
+                  <div className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</div>
+                  <div className="text-sm font-semibold text-gray-900">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <img 
+              src="https://images.pexels.com/photos/7663144/pexels-photo-7663144.jpeg" 
+              alt="Hugin Dashboard"
+              className="rounded-2xl shadow-2xl mx-auto max-w-4xl w-full"
+            />
+          </div>
+        </div>
+      </section>
+
       <FeaturesSection />
+      
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-br from-purple-600 to-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Build Your Second Brain?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join thousands of creators who are already organizing their digital conversations and content with Hugin.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
       
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12">
@@ -31,15 +89,15 @@ const LandingPage = ({ onLoginClick }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center mr-2">
+                <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span className="text-xl font-bold">HighLevel</span>
+                <span className="text-xl font-bold">Hugin</span>
               </div>
               <p className="text-gray-400 mb-4">
-                The complete marketing automation platform for agencies and businesses.
+                Your second brain for organizing conversations and content across all platforms.
               </p>
             </div>
             
@@ -75,7 +133,7 @@ const LandingPage = ({ onLoginClick }) => {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 HighLevel. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p>&copy; 2025 Hugin. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
       </footer>
@@ -83,94 +141,84 @@ const LandingPage = ({ onLoginClick }) => {
   );
 };
 
-// Dashboard Component
+// Dashboard Component (Updated for Hugin)
 const Dashboard = ({ onLogout }) => {
-  const [activeSection, setActiveSection] = useState('dashboard');
+  const [activeSection, setActiveSection] = useState('overview');
 
   const renderDashboardContent = () => {
     switch (activeSection) {
-      case 'dashboard':
-        return <DashboardOverview />;
-      case 'contacts':
-        return <ContactsManagement />;
+      case 'overview':
+        return <HuginOverview />;
       case 'conversations':
+        return <ConversationsModule />;
+      case 'content-board':
+        return <ContentBoard />;
+      case 'content-calendar':
+        return <ContentCalendar />;
+      case 'hugin-assistant':
+        return <HuginAssistant />;
+      case 'settings':
         return (
           <div className="p-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Conversations</h1>
-            <div className="bg-white rounded-xl shadow-sm border p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No conversations yet</h3>
-              <p className="text-gray-600">Start engaging with your contacts to see conversations here.</p>
-            </div>
-          </div>
-        );
-      case 'calendar':
-        return (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Calendar</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Settings</h1>
             <div className="bg-white rounded-xl shadow-sm border p-8">
-              <div className="grid grid-cols-7 gap-4 mb-6">
-                {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
-                  <div key={day} className="text-center font-semibold text-gray-700 p-2">
-                    {day}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Account Settings</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Display Name</label>
+                      <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" defaultValue="Content Creator" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                      <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" defaultValue="user@example.com" />
+                    </div>
                   </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-7 gap-4">
-                {Array.from({ length: 35 }, (_, i) => (
-                  <div key={i} className="h-20 border border-gray-200 rounded-lg p-2 hover:bg-gray-50">
-                    <div className="text-sm text-gray-600">{((i % 31) + 1)}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        );
-      case 'campaigns':
-        return (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Campaigns</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { name: 'Welcome Series', type: 'Email', status: 'Active', sent: '1,234' },
-                { name: 'Follow-up SMS', type: 'SMS', status: 'Paused', sent: '856' },
-                { name: 'Newsletter', type: 'Email', status: 'Active', sent: '2,105' }
-              ].map((campaign, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-sm border p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-semibold text-gray-900">{campaign.name}</h3>
-                    <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                      campaign.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
-                    }`}>
-                      {campaign.status}
-                    </span>
-                  </div>
-                  <div className="text-sm text-gray-600 mb-2">Type: {campaign.type}</div>
-                  <div className="text-sm text-gray-600">Sent: {campaign.sent}</div>
                 </div>
-              ))}
+                
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Platform Connections</h3>
+                  <div className="space-y-3">
+                    {[
+                      { name: 'Instagram', connected: true },
+                      { name: 'LinkedIn', connected: true },
+                      { name: 'Twitter', connected: false },
+                      { name: 'Facebook', connected: false }
+                    ].map((platform) => (
+                      <div key={platform.name} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg">
+                        <span className="font-medium text-gray-900">{platform.name}</span>
+                        <button className={`px-3 py-1 rounded text-sm ${platform.connected ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}`}>
+                          {platform.connected ? 'Connected' : 'Connect'}
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Notifications</h3>
+                  <div className="space-y-3">
+                    <label className="flex items-center space-x-3">
+                      <input type="checkbox" className="rounded border-gray-300 text-purple-600 focus:ring-purple-500" defaultChecked />
+                      <span className="text-gray-700">Email notifications for new content ideas</span>
+                    </label>
+                    <label className="flex items-center space-x-3">
+                      <input type="checkbox" className="rounded border-gray-300 text-purple-600 focus:ring-purple-500" defaultChecked />
+                      <span className="text-gray-700">Push notifications for scheduled posts</span>
+                    </label>
+                    <label className="flex items-center space-x-3">
+                      <input type="checkbox" className="rounded border-gray-300 text-purple-600 focus:ring-purple-500" />
+                      <span className="text-gray-700">Weekly summary reports</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         );
       default:
-        return (
-          <div className="p-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">{activeSection.charAt(0).toUpperCase() + activeSection.slice(1)}</h1>
-            <div className="bg-white rounded-xl shadow-sm border p-8 text-center">
-              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Coming Soon</h3>
-              <p className="text-gray-600">This feature is under development.</p>
-            </div>
-          </div>
-        );
+        return <HuginOverview />;
     }
   };
 

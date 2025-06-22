@@ -34,10 +34,33 @@ import {
   MoreHorizontal,
   Eye,
   Edit,
-  Trash2
+  Trash2,
+  Brain,
+  Columns3,
+  CalendarDays,
+  Bot,
+  Hash,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Send,
+  Archive,
+  Clock,
+  CheckCircle2,
+  Circle,
+  MoveRight,
+  Sparkles,
+  MessageSquare,
+  Copy,
+  Bookmark,
+  Tag,
+  ChevronRight,
+  Download,
+  Upload
 } from 'lucide-react';
 
-// Header Component
+// Header Component (Updated for Hugin)
 export const Header = ({ onLoginClick, showLogin = true }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -47,38 +70,38 @@ export const Header = ({ onLoginClick, showLogin = true }) => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center mr-2">
-                <BarChart3 className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">HighLevel</span>
+              <span className="text-xl font-bold text-gray-900">Hugin</span>
             </div>
           </div>
 
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Features</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Pricing</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Resources</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Support</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Features</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Pricing</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Resources</a>
+            <a href="#" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Support</a>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
             {showLogin && (
               <button 
                 onClick={onLoginClick}
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium"
               >
                 Login to App
               </button>
             )}
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-              14 DAY FREE TRIAL
+            <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+              Start Free Trial
             </button>
           </div>
 
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-gray-700 hover:text-purple-600"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -96,21 +119,21 @@ export const Header = ({ onLoginClick, showLogin = true }) => {
             className="md:hidden bg-white border-t"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Features</a>
-              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Pricing</a>
-              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Resources</a>
-              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Support</a>
+              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Features</a>
+              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Pricing</a>
+              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Resources</a>
+              <a href="#" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Support</a>
               {showLogin && (
                 <button 
                   onClick={onLoginClick}
-                  className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600"
+                  className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600"
                 >
                   Login to App
                 </button>
               )}
               <div className="px-3 py-2">
-                <button className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-                  14 DAY FREE TRIAL
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
+                  Start Free Trial
                 </button>
               </div>
             </div>
@@ -121,10 +144,10 @@ export const Header = ({ onLoginClick, showLogin = true }) => {
   );
 };
 
-// Hero Section Component
+// Hero Section Component (Updated for Hugin)
 export const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
@@ -134,21 +157,22 @@ export const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center mb-6">
-              <Zap className="w-6 h-6 text-yellow-400 mr-2" />
-              <span className="text-yellow-400 font-semibold">Power Up Your Business:</span>
+              <Brain className="w-6 h-6 text-purple-400 mr-2" />
+              <span className="text-purple-400 font-semibold">Your Second Brain:</span>
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-              Elevate Your Marketing and Sales with HighLevel's{' '}
-              <span className="text-blue-400">All-in-One Platform!</span>
+              Organize Your{' '}
+              <span className="text-purple-400">Digital Conversations</span>
+              {' '}& Content Ideas
             </h1>
             <p className="text-xl mb-8 text-gray-300 leading-relaxed">
-              Transform your business with our comprehensive CRM, marketing automation, 
-              and sales funnel platform designed for agencies and businesses.
+              Hugin helps you save, organize, and leverage your online conversations and content ideas 
+              across Instagram, LinkedIn, and other platforms. Never lose a great conversation or content idea again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center">
-                14 DAY FREE TRIAL
-                <span className="ml-2 text-sm">No obligations, no contracts, cancel at any time</span>
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center">
+                <Brain className="w-5 h-5 mr-2" />
+                Start Your Second Brain
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -165,10 +189,10 @@ export const HeroSection = () => {
           >
             <img 
               src="https://images.pexels.com/photos/8254894/pexels-photo-8254894.jpeg" 
-              alt="HighLevel Dashboard"
+              alt="Hugin Dashboard"
               className="rounded-2xl shadow-2xl w-full"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-green-500/20 rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-blue-500/20 rounded-2xl"></div>
           </motion.div>
         </div>
       </div>
@@ -176,140 +200,51 @@ export const HeroSection = () => {
   );
 };
 
-// Awards Section Component
-export const AwardsSection = () => {
-  const awards = [
-    { name: "Momentum Leader", year: "2025" },
-    { name: "#1 Capterra", year: "2025" },
-    { name: "Best Value", year: "2025" },
-    { name: "Users Most Likely to Recommend", year: "2025" },
-    { name: "Regional Leader", year: "2025" },
-    { name: "Grid Leader", year: "2025" }
-  ];
-
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">AWARDS</h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {awards.map((award, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-                <Award className="w-12 h-12 text-orange-500 mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 text-sm">{award.name}</h3>
-                <p className="text-orange-500 text-xs font-medium">{award.year}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Stats Section Component
-export const StatsSection = () => {
-  const stats = [
-    { number: "1260000", label: "BUSINESSES POWERED", suffix: "" },
-    { number: "863100", label: "MONTHLY MESSAGES", suffix: "" },
-    { number: "123", label: "MONTHLY LEADS", suffix: "" },
-    { number: "12", label: "MONTHLY CONVERSATIONS", suffix: "" }
-  ];
-
-  return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            We're in The Business Of Helping You Grow Your Business
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            HighLevel is the first-ever all-in-one platform that will give you the tools, support and resources you need to succeed and crush your marketing goals. Currently serving:
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-sm font-semibold text-gray-900 uppercase">{stat.label}</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <img 
-            src="https://images.pexels.com/photos/7663144/pexels-photo-7663144.jpeg" 
-            alt="Platform Demo"
-            className="rounded-2xl shadow-2xl mx-auto max-w-4xl w-full"
-          />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Features Section Component
+// Features Section Component (Updated for Hugin)
 export const FeaturesSection = () => {
   return (
     <section className="py-16 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
-            HighLevel: Everything You Need To Succeed
+            Your Complete Content Organization System
           </h2>
           <p className="text-xl text-gray-300">
-            We help you consolidate all of your marketing tools.
+            Capture, organize, and leverage every conversation and content idea.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              icon: <Users className="w-8 h-8" />,
-              title: "CRM & Pipeline Management",
-              description: "Manage leads, track opportunities, and automate your sales process with our powerful CRM system."
-            },
-            {
-              icon: <Calendar className="w-8 h-8" />,
-              title: "Appointment Scheduling",
-              description: "Let clients book appointments automatically with calendar integration and automated reminders."
-            },
-            {
-              icon: <Mail className="w-8 h-8" />,
-              title: "Email Marketing",
-              description: "Create and send beautiful email campaigns with advanced automation and segmentation."
-            },
-            {
               icon: <MessageCircle className="w-8 h-8" />,
-              title: "SMS Marketing",
-              description: "Reach customers instantly with text message campaigns and automated follow-ups."
+              title: "Conversation Manager",
+              description: "Save and organize online conversations from Instagram, LinkedIn, and other platforms with tags and status tracking."
             },
             {
-              icon: <Globe className="w-8 h-8" />,
-              title: "Website & Funnel Builder",
-              description: "Build professional websites and sales funnels with our drag-and-drop builder."
+              icon: <Columns3 className="w-8 h-8" />,
+              title: "Content Board",
+              description: "Kanban-style board to manage your content ideas, drafts, and posts across different stages of creation."
+            },
+            {
+              icon: <CalendarDays className="w-8 h-8" />,
+              title: "Content Calendar",
+              description: "Plan and schedule your content with a visual weekly calendar view and automated reminders."
+            },
+            {
+              icon: <Bot className="w-8 h-8" />,
+              title: "AI Assistant",
+              description: "Get conversation summaries, content ideas, and retrieve saved items using semantic search."
+            },
+            {
+              icon: <Hash className="w-8 h-8" />,
+              title: "Smart Tagging",
+              description: "Organize everything with intelligent tags and categories for easy discovery and filtering."
             },
             {
               icon: <BarChart3 className="w-8 h-8" />,
-              title: "Analytics & Reporting",
-              description: "Track performance with detailed analytics and customizable reports."
+              title: "Content Analytics",
+              description: "Track your content creation progress, popular tags, and engagement metrics."
             }
           ].map((feature, index) => (
             <motion.div
@@ -319,7 +254,7 @@ export const FeaturesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-colors"
             >
-              <div className="text-blue-400 mb-4">{feature.icon}</div>
+              <div className="text-purple-400 mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </motion.div>
@@ -330,14 +265,13 @@ export const FeaturesSection = () => {
   );
 };
 
-// Login Component
+// Login Component (Updated for Hugin)
 export const LoginForm = ({ onClose, onLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Mock login - in real app, this would validate credentials
     if (email && password) {
       onLoginSuccess();
     }
@@ -354,17 +288,17 @@ export const LoginForm = ({ onClose, onLoginSuccess }) => {
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center mr-2">
-                <BarChart3 className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-gray-900">HighLevel</span>
+              <span className="text-xl font-bold text-gray-900">Hugin</span>
             </div>
             <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
               <X className="w-6 h-6" />
             </button>
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Sign into your account</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Access Your Second Brain</h2>
 
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
@@ -374,7 +308,7 @@ export const LoginForm = ({ onClose, onLoginSuccess }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 required
               />
             </div>
@@ -385,18 +319,18 @@ export const LoginForm = ({ onClose, onLoginSuccess }) => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="The password you picked"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your password"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 required
               />
               <div className="text-right mt-2">
-                <a href="#" className="text-sm text-blue-600 hover:text-blue-800">Forgot password?</a>
+                <a href="#" className="text-sm text-purple-600 hover:text-purple-800">Forgot password?</a>
               </div>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors"
             >
               Sign in
             </button>
@@ -415,11 +349,6 @@ export const LoginForm = ({ onClose, onLoginSuccess }) => {
               </svg>
               Sign in with Google
             </button>
-
-            <div className="text-center text-sm text-gray-600 mt-4">
-              By signing in you agree to our{' '}
-              <a href="#" className="text-blue-600 hover:text-blue-800">Terms and Conditions</a>
-            </div>
           </form>
         </div>
       </motion.div>
@@ -427,18 +356,14 @@ export const LoginForm = ({ onClose, onLoginSuccess }) => {
   );
 };
 
-// Dashboard Sidebar Component
+// Dashboard Sidebar Component (Updated for Hugin)
 export const DashboardSidebar = ({ activeSection, setActiveSection }) => {
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: <Home className="w-5 h-5" /> },
-    { id: 'contacts', label: 'Contacts', icon: <Users className="w-5 h-5" /> },
+    { id: 'overview', label: 'Overview', icon: <Home className="w-5 h-5" /> },
     { id: 'conversations', label: 'Conversations', icon: <MessageCircle className="w-5 h-5" /> },
-    { id: 'calendar', label: 'Calendar', icon: <Calendar className="w-5 h-5" /> },
-    { id: 'campaigns', label: 'Campaigns', icon: <Mail className="w-5 h-5" /> },
-    { id: 'funnels', label: 'Funnels', icon: <Target className="w-5 h-5" /> },
-    { id: 'websites', label: 'Websites', icon: <Globe className="w-5 h-5" /> },
-    { id: 'opportunities', label: 'Opportunities', icon: <Briefcase className="w-5 h-5" /> },
-    { id: 'analytics', label: 'Analytics', icon: <BarChart3 className="w-5 h-5" /> },
+    { id: 'content-board', label: 'Content Board', icon: <Columns3 className="w-5 h-5" /> },
+    { id: 'content-calendar', label: 'Content Calendar', icon: <CalendarDays className="w-5 h-5" /> },
+    { id: 'hugin-assistant', label: 'Hugin Assistant', icon: <Bot className="w-5 h-5" /> },
     { id: 'settings', label: 'Settings', icon: <Settings className="w-5 h-5" /> }
   ];
 
@@ -446,10 +371,10 @@ export const DashboardSidebar = ({ activeSection, setActiveSection }) => {
     <div className="w-64 bg-slate-900 text-white h-screen fixed left-0 top-0 overflow-y-auto">
       <div className="p-6">
         <div className="flex items-center mb-8">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center mr-3">
-            <BarChart3 className="w-5 h-5 text-white" />
+          <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+            <Brain className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-bold">HighLevel</span>
+          <span className="text-xl font-bold">Hugin</span>
         </div>
 
         <nav className="space-y-2">
@@ -459,7 +384,7 @@ export const DashboardSidebar = ({ activeSection, setActiveSection }) => {
               onClick={() => setActiveSection(item.id)}
               className={`w-full flex items-center px-4 py-3 rounded-lg text-left transition-colors ${
                 activeSection === item.id
-                  ? 'bg-blue-600 text-white'
+                  ? 'bg-purple-600 text-white'
                   : 'text-gray-300 hover:bg-slate-800 hover:text-white'
               }`}
             >
@@ -473,7 +398,7 @@ export const DashboardSidebar = ({ activeSection, setActiveSection }) => {
   );
 };
 
-// Dashboard Header Component
+// Dashboard Header Component (Updated for Hugin)
 export const DashboardHeader = ({ onLogout }) => {
   return (
     <header className="bg-white shadow-sm border-b ml-64 sticky top-0 z-40">
@@ -483,23 +408,23 @@ export const DashboardHeader = ({ onLogout }) => {
             <Search className="w-5 h-5 text-gray-400 mr-3" />
             <input
               type="text"
-              placeholder="Search contacts, campaigns, etc..."
-              className="bg-gray-50 border-0 rounded-lg px-4 py-2 w-96 focus:ring-2 focus:ring-blue-500"
+              placeholder="Search conversations, content, tags..."
+              className="bg-gray-50 border-0 rounded-lg px-4 py-2 w-96 focus:ring-2 focus:ring-purple-500"
             />
           </div>
 
           <div className="flex items-center space-x-4">
             <button className="relative p-2 text-gray-600 hover:text-gray-900">
               <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-purple-500 rounded-full"></span>
             </button>
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+              <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
                 <User className="w-5 h-5 text-white" />
               </div>
               <div className="hidden md:block">
-                <div className="text-sm font-semibold text-gray-900">John Doe</div>
-                <div className="text-xs text-gray-500">Agency Owner</div>
+                <div className="text-sm font-semibold text-gray-900">Content Creator</div>
+                <div className="text-xs text-gray-500">Second Brain User</div>
               </div>
               <button
                 onClick={onLogout}
@@ -515,20 +440,44 @@ export const DashboardHeader = ({ onLogout }) => {
   );
 };
 
-// Dashboard Overview Component
-export const DashboardOverview = () => {
+// Hugin Overview Component (New Dashboard)
+export const HuginOverview = () => {
   const stats = [
-    { label: 'Total Contacts', value: '2,847', change: '+12%', icon: <Users className="w-8 h-8" /> },
-    { label: 'Active Campaigns', value: '23', change: '+5%', icon: <Mail className="w-8 h-8" /> },
-    { label: 'Monthly Revenue', value: '$47,892', change: '+23%', icon: <TrendingUp className="w-8 h-8" /> },
-    { label: 'Conversion Rate', value: '8.4%', change: '+1.2%', icon: <Target className="w-8 h-8" /> }
+    { label: 'Conversations Saved', value: '127', change: '+23 this week', icon: <MessageCircle className="w-8 h-8" /> },
+    { label: 'Content Posts', value: '45', change: '+8 this week', icon: <FileText className="w-8 h-8" /> },
+    { label: 'Active Tags', value: '18', change: '+3 new tags', icon: <Hash className="w-8 h-8" /> },
+    { label: 'Scheduled Posts', value: '12', change: '+5 this week', icon: <Clock className="w-8 h-8" /> }
   ];
+
+  const recentActivity = [
+    { action: 'Saved Instagram conversation', contact: '@sarah_marketing', time: '2 min ago', platform: 'instagram' },
+    { action: 'Created content draft', contact: 'LinkedIn post about AI', time: '1 hour ago', platform: 'linkedin' },
+    { action: 'Tagged conversation', contact: '#content-ideas', time: '3 hours ago', platform: 'general' },
+    { action: 'Scheduled post', contact: 'Weekly newsletter', time: '5 hours ago', platform: 'general' }
+  ];
+
+  const topTags = [
+    { name: 'content-ideas', count: 34 },
+    { name: 'networking', count: 28 },
+    { name: 'collaboration', count: 22 },
+    { name: 'inspiration', count: 19 },
+    { name: 'strategy', count: 16 }
+  ];
+
+  const getPlatformIcon = (platform) => {
+    switch (platform) {
+      case 'instagram': return <Instagram className="w-4 h-4 text-pink-500" />;
+      case 'linkedin': return <Linkedin className="w-4 h-4 text-blue-600" />;
+      case 'twitter': return <Twitter className="w-4 h-4 text-blue-400" />;
+      default: return <MessageCircle className="w-4 h-4 text-gray-500" />;
+    }
+  };
 
   return (
     <div className="p-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Dashboard</h1>
-        <p className="text-gray-600">Welcome back! Here's what's happening with your business.</p>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Your Second Brain Overview</h1>
+        <p className="text-gray-600">Welcome back! Here's what's happening with your content organization.</p>
       </div>
 
       {/* Stats Grid */}
@@ -542,7 +491,7 @@ export const DashboardOverview = () => {
             className="bg-white rounded-xl shadow-sm border p-6"
           >
             <div className="flex items-center justify-between mb-4">
-              <div className="text-blue-600">{stat.icon}</div>
+              <div className="text-purple-600">{stat.icon}</div>
               <span className="text-green-600 text-sm font-semibold">{stat.change}</span>
             </div>
             <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
@@ -551,30 +500,15 @@ export const DashboardOverview = () => {
         ))}
       </div>
 
-      {/* Charts and Recent Activity */}
+      {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Recent Activity */}
         <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Revenue Analytics</h3>
-          <div className="h-64 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg flex items-center justify-center">
-            <img 
-              src="https://images.pexels.com/photos/8532850/pexels-photo-8532850.jpeg" 
-              alt="Analytics Chart"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-        </div>
-
-        <div className="bg-white rounded-xl shadow-sm border p-6">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
           <div className="space-y-4">
-            {[
-              { action: 'New contact added', contact: 'Sarah Johnson', time: '2 min ago' },
-              { action: 'Campaign sent', contact: 'Newsletter #47', time: '1 hour ago' },
-              { action: 'Appointment booked', contact: 'Mike Chen', time: '3 hours ago' },
-              { action: 'Deal closed', contact: '$2,500 - ABC Corp', time: '5 hours ago' }
-            ].map((activity, index) => (
-              <div key={index} className="flex items-center space-x-3 py-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+            {recentActivity.map((activity, index) => (
+              <div key={index} className="flex items-center space-x-3 py-3 border-b border-gray-100 last:border-b-0">
+                <div className="flex-shrink-0">{getPlatformIcon(activity.platform)}</div>
                 <div className="flex-1">
                   <div className="text-sm font-medium text-gray-900">{activity.action}</div>
                   <div className="text-xs text-gray-500">{activity.contact}</div>
@@ -584,39 +518,138 @@ export const DashboardOverview = () => {
             ))}
           </div>
         </div>
+
+        {/* Top Tags */}
+        <div className="bg-white rounded-xl shadow-sm border p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Tags</h3>
+          <div className="space-y-3">
+            {topTags.map((tag, index) => (
+              <div key={index} className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <Hash className="w-4 h-4 text-purple-500" />
+                  <span className="text-sm font-medium text-gray-900">{tag.name}</span>
+                </div>
+                <span className="text-sm text-gray-500">{tag.count}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content Analytics */}
+      <div className="mt-6 bg-white rounded-xl shadow-sm border p-6">
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">Content Analytics</h3>
+        <div className="h-64 bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg flex items-center justify-center">
+          <img 
+            src="https://images.pexels.com/photos/8532850/pexels-photo-8532850.jpeg" 
+            alt="Content Analytics"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-// Contacts Management Component
-export const ContactsManagement = () => {
+// Conversations Module Component (Replaces CRM)
+export const ConversationsModule = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedFilter, setSelectedFilter] = useState('all');
+  const [selectedPlatform, setSelectedPlatform] = useState('all');
+  const [selectedStatus, setSelectedStatus] = useState('all');
   
-  const mockContacts = [
-    { id: 1, name: 'Sarah Johnson', email: 'sarah@email.com', phone: '+1 (555) 123-4567', status: 'Lead', lastContact: '2 hours ago', value: '$2,500' },
-    { id: 2, name: 'Mike Chen', email: 'mike@company.com', phone: '+1 (555) 234-5678', status: 'Customer', lastContact: '1 day ago', value: '$5,200' },
-    { id: 3, name: 'Emily Davis', email: 'emily@startup.com', phone: '+1 (555) 345-6789', status: 'Prospect', lastContact: '3 days ago', value: '$1,800' },
-    { id: 4, name: 'James Wilson', email: 'james@business.com', phone: '+1 (555) 456-7890', status: 'Lead', lastContact: '1 week ago', value: '$3,400' },
-    { id: 5, name: 'Lisa Thompson', email: 'lisa@agency.com', phone: '+1 (555) 567-8901', status: 'Customer', lastContact: '2 weeks ago', value: '$7,800' }
+  const mockConversations = [
+    { 
+      id: 1, 
+      contact: '@sarah_marketing', 
+      platform: 'instagram', 
+      summary: 'Discussion about content collaboration opportunities and cross-promotion strategies', 
+      tags: ['collaboration', 'content-ideas', 'networking'], 
+      status: 'Inbox',
+      lastUpdated: '2 hours ago',
+      priority: 'high'
+    },
+    { 
+      id: 2, 
+      contact: 'Mike Chen', 
+      platform: 'linkedin', 
+      summary: 'Conversation about AI tools for content creation and productivity hacks', 
+      tags: ['ai-tools', 'productivity', 'content-creation'], 
+      status: 'Drafting',
+      lastUpdated: '1 day ago',
+      priority: 'medium'
+    },
+    { 
+      id: 3, 
+      contact: '@emily_design', 
+      platform: 'instagram', 
+      summary: 'Design feedback session and potential partnership discussion', 
+      tags: ['design', 'feedback', 'partnership'], 
+      status: 'Ready',
+      lastUpdated: '3 days ago',
+      priority: 'low'
+    },
+    { 
+      id: 4, 
+      contact: 'Lisa Thompson', 
+      platform: 'linkedin', 
+      summary: 'LinkedIn networking conversation about industry trends and events', 
+      tags: ['networking', 'industry-trends', 'events'], 
+      status: 'Posted',
+      lastUpdated: '1 week ago',
+      priority: 'medium'
+    },
+    { 
+      id: 5, 
+      contact: '@james_tech', 
+      platform: 'twitter', 
+      summary: 'Tech discussion about latest development tools and frameworks', 
+      tags: ['tech', 'development', 'tools'], 
+      status: 'Archive',
+      lastUpdated: '2 weeks ago',
+      priority: 'low'
+    }
   ];
 
-  const filteredContacts = mockContacts.filter(contact =>
-    contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    contact.email.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredConversations = mockConversations.filter(conv => {
+    const matchesSearch = conv.contact.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         conv.summary.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         conv.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesPlatform = selectedPlatform === 'all' || conv.platform === selectedPlatform;
+    const matchesStatus = selectedStatus === 'all' || conv.status === selectedStatus;
+    return matchesSearch && matchesPlatform && matchesStatus;
+  });
+
+  const getPlatformIcon = (platform) => {
+    switch (platform) {
+      case 'instagram': return <Instagram className="w-4 h-4 text-pink-500" />;
+      case 'linkedin': return <Linkedin className="w-4 h-4 text-blue-600" />;
+      case 'twitter': return <Twitter className="w-4 h-4 text-blue-400" />;
+      case 'facebook': return <Facebook className="w-4 h-4 text-blue-600" />;
+      default: return <MessageCircle className="w-4 h-4 text-gray-500" />;
+    }
+  };
+
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'Inbox': return 'bg-blue-100 text-blue-800';
+      case 'Drafting': return 'bg-yellow-100 text-yellow-800';
+      case 'Ready': return 'bg-green-100 text-green-800';
+      case 'Posted': return 'bg-purple-100 text-purple-800';
+      case 'Archive': return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
 
   return (
     <div className="p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Contacts</h1>
-          <p className="text-gray-600">Manage your leads, prospects, and customers</p>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Conversations</h1>
+          <p className="text-gray-600">Manage your saved online conversations and interactions</p>
         </div>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+        <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg flex items-center">
           <Plus className="w-4 h-4 mr-2" />
-          Add Contact
+          Add Conversation
         </button>
       </div>
 
@@ -627,91 +660,533 @@ export const ContactsManagement = () => {
             <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Search contacts..."
+              placeholder="Search conversations, contacts, tags..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             />
           </div>
           <div className="flex items-center space-x-2">
-            <Filter className="w-5 h-5 text-gray-400" />
             <select
-              value={selectedFilter}
-              onChange={(e) => setSelectedFilter(e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+              value={selectedPlatform}
+              onChange={(e) => setSelectedPlatform(e.target.value)}
+              className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500"
             >
-              <option value="all">All Contacts</option>
-              <option value="lead">Leads</option>
-              <option value="prospect">Prospects</option>
-              <option value="customer">Customers</option>
+              <option value="all">All Platforms</option>
+              <option value="instagram">Instagram</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="twitter">Twitter</option>
+              <option value="facebook">Facebook</option>
+            </select>
+            <select
+              value={selectedStatus}
+              onChange={(e) => setSelectedStatus(e.target.value)}
+              className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500"
+            >
+              <option value="all">All Status</option>
+              <option value="Inbox">Inbox</option>
+              <option value="Drafting">Drafting</option>
+              <option value="Ready">Ready</option>
+              <option value="Posted">Posted</option>
+              <option value="Archive">Archive</option>
             </select>
           </div>
         </div>
       </div>
 
-      {/* Contacts Table */}
+      {/* Conversations List */}
+      <div className="space-y-4">
+        {filteredConversations.map((conversation) => (
+          <motion.div
+            key={conversation.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-shadow"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <div className="flex items-center space-x-3">
+                {getPlatformIcon(conversation.platform)}
+                <div>
+                  <h3 className="font-semibold text-gray-900">{conversation.contact}</h3>
+                  <p className="text-sm text-gray-500 capitalize">{conversation.platform}</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(conversation.status)}`}>
+                  {conversation.status}
+                </span>
+                <div className="flex items-center space-x-1">
+                  <button className="text-gray-400 hover:text-gray-600">
+                    <Eye className="w-4 h-4" />
+                  </button>
+                  <button className="text-gray-400 hover:text-gray-600">
+                    <Edit className="w-4 h-4" />
+                  </button>
+                  <button className="text-gray-400 hover:text-gray-600">
+                    <MoreHorizontal className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-gray-700 mb-4">{conversation.summary}</p>
+            
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                {conversation.tags.map((tag, index) => (
+                  <span key={index} className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+              <span className="text-sm text-gray-500">{conversation.lastUpdated}</span>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Content Board Component (Kanban View)
+export const ContentBoard = () => {
+  const [columns, setColumns] = useState({
+    ideas: {
+      title: 'Ideas',
+      items: [
+        { id: '1', title: 'AI productivity tips', platform: 'linkedin', tags: ['ai', 'productivity'] },
+        { id: '2', title: 'Instagram story series', platform: 'instagram', tags: ['stories', 'series'] },
+        { id: '3', title: 'Twitter thread on creativity', platform: 'twitter', tags: ['creativity', 'thread'] }
+      ]
+    },
+    drafting: {
+      title: 'Drafting',
+      items: [
+        { id: '4', title: 'LinkedIn post about networking', platform: 'linkedin', tags: ['networking', 'career'] },
+        { id: '5', title: 'Instagram carousel design', platform: 'instagram', tags: ['design', 'carousel'] }
+      ]
+    },
+    review: {
+      title: 'Review',
+      items: [
+        { id: '6', title: 'Blog post about content creation', platform: 'blog', tags: ['content', 'creation'] }
+      ]
+    },
+    scheduled: {
+      title: 'Scheduled',
+      items: [
+        { id: '7', title: 'Weekly newsletter', platform: 'email', tags: ['newsletter', 'weekly'] },
+        { id: '8', title: 'Instagram Reel', platform: 'instagram', tags: ['reel', 'video'] }
+      ]
+    },
+    published: {
+      title: 'Published',
+      items: [
+        { id: '9', title: 'LinkedIn article', platform: 'linkedin', tags: ['article', 'long-form'] },
+        { id: '10', title: 'Twitter poll', platform: 'twitter', tags: ['poll', 'engagement'] }
+      ]
+    }
+  });
+
+  const getPlatformIcon = (platform) => {
+    switch (platform) {
+      case 'instagram': return <Instagram className="w-4 h-4 text-pink-500" />;
+      case 'linkedin': return <Linkedin className="w-4 h-4 text-blue-600" />;
+      case 'twitter': return <Twitter className="w-4 h-4 text-blue-400" />;
+      case 'facebook': return <Facebook className="w-4 h-4 text-blue-600" />;
+      case 'email': return <Mail className="w-4 h-4 text-green-500" />;
+      case 'blog': return <FileText className="w-4 h-4 text-gray-600" />;
+      default: return <MessageCircle className="w-4 h-4 text-gray-500" />;
+    }
+  };
+
+  const getColumnColor = (columnId) => {
+    const colors = {
+      ideas: 'border-t-blue-500',
+      drafting: 'border-t-yellow-500',
+      review: 'border-t-orange-500',
+      scheduled: 'border-t-green-500',
+      published: 'border-t-purple-500'
+    };
+    return colors[columnId] || 'border-t-gray-500';
+  };
+
+  const ContentCard = ({ item }) => (
+    <motion.div
+      layout
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.8 }}
+      className="bg-white rounded-lg shadow-sm border p-4 mb-3 hover:shadow-md transition-shadow cursor-pointer"
+    >
+      <div className="flex items-start justify-between mb-3">
+        <h4 className="font-medium text-gray-900 text-sm">{item.title}</h4>
+        <div className="flex items-center space-x-1">
+          {getPlatformIcon(item.platform)}
+          <button className="text-gray-400 hover:text-gray-600">
+            <MoreHorizontal className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-1">
+        {item.tags.map((tag, index) => (
+          <span key={index} className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
+            #{tag}
+          </span>
+        ))}
+      </div>
+    </motion.div>
+  );
+
+  return (
+    <div className="p-6">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Content Board</h1>
+          <p className="text-gray-600">Manage your content across different stages of creation</p>
+        </div>
+        <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg flex items-center">
+          <Plus className="w-4 h-4 mr-2" />
+          Add Content
+        </button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 overflow-x-auto">
+        {Object.entries(columns).map(([columnId, column]) => (
+          <div key={columnId} className={`bg-gray-50 rounded-lg p-4 min-h-96 border-t-4 ${getColumnColor(columnId)}`}>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-semibold text-gray-900">{column.title}</h3>
+              <span className="text-sm text-gray-500 bg-white px-2 py-1 rounded">
+                {column.items.length}
+              </span>
+            </div>
+            <div className="space-y-2">
+              <AnimatePresence>
+                {column.items.map((item) => (
+                  <ContentCard key={item.id} item={item} />
+                ))}
+              </AnimatePresence>
+            </div>
+            <button className="w-full mt-4 py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-purple-300 hover:text-purple-600 transition-colors">
+              + Add item
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Content Calendar Component
+export const ContentCalendar = () => {
+  const [currentWeek, setCurrentWeek] = useState(new Date());
+  
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const weekDates = Array.from({ length: 7 }, (_, i) => {
+    const date = new Date(currentWeek);
+    date.setDate(date.getDate() - date.getDay() + i);
+    return date;
+  });
+
+  const mockScheduledContent = {
+    '2025-06-22': [
+      { id: 1, title: 'LinkedIn post', platform: 'linkedin', time: '09:00', status: 'scheduled' },
+      { id: 2, title: 'Instagram story', platform: 'instagram', time: '15:00', status: 'draft' }
+    ],
+    '2025-06-24': [
+      { id: 3, title: 'Twitter thread', platform: 'twitter', time: '12:00', status: 'scheduled' }
+    ],
+    '2025-06-26': [
+      { id: 4, title: 'Newsletter', platform: 'email', time: '10:00', status: 'scheduled' },
+      { id: 5, title: 'Instagram Reel', platform: 'instagram', time: '18:00', status: 'idea' }
+    ]
+  };
+
+  const getPlatformIcon = (platform) => {
+    switch (platform) {
+      case 'instagram': return <Instagram className="w-3 h-3 text-pink-500" />;
+      case 'linkedin': return <Linkedin className="w-3 h-3 text-blue-600" />;
+      case 'twitter': return <Twitter className="w-3 h-3 text-blue-400" />;
+      case 'email': return <Mail className="w-3 h-3 text-green-500" />;
+      default: return <MessageCircle className="w-3 h-3 text-gray-500" />;
+    }
+  };
+
+  const getStatusColor = (status) => {
+    switch (status) {
+      case 'scheduled': return 'bg-green-100 text-green-800 border-green-200';
+      case 'draft': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'idea': return 'bg-blue-100 text-blue-800 border-blue-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+    }
+  };
+
+  return (
+    <div className="p-6">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Content Calendar</h1>
+          <p className="text-gray-600">Plan and schedule your content across platforms</p>
+        </div>
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
+            <button 
+              onClick={() => setCurrentWeek(new Date(currentWeek.getTime() - 7 * 24 * 60 * 60 * 1000))}
+              className="p-2 text-gray-600 hover:text-gray-900"
+            >
+              <ChevronDown className="w-4 h-4 rotate-90" />
+            </button>
+            <span className="font-medium text-gray-900">
+              {weekDates[0].toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} - {weekDates[6].toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+            </span>
+            <button 
+              onClick={() => setCurrentWeek(new Date(currentWeek.getTime() + 7 * 24 * 60 * 60 * 1000))}
+              className="p-2 text-gray-600 hover:text-gray-900"
+            >
+              <ChevronDown className="w-4 h-4 -rotate-90" />
+            </button>
+          </div>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg flex items-center">
+            <Plus className="w-4 h-4 mr-2" />
+            Add Content
+          </button>
+        </div>
+      </div>
+
       <div className="bg-white rounded-xl shadow-sm border overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contact Info</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Contact</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {filteredContacts.map((contact) => (
-                <tr key={contact.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                        <User className="w-5 h-5 text-white" />
+        <div className="grid grid-cols-7 border-b border-gray-200">
+          {days.map((day, index) => (
+            <div key={day} className="p-4 text-center border-r border-gray-200 last:border-r-0">
+              <div className="font-semibold text-gray-900">{day}</div>
+              <div className="text-sm text-gray-500 mt-1">
+                {weekDates[index].getDate()}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="grid grid-cols-7 min-h-96">
+          {weekDates.map((date, index) => {
+            const dateStr = date.toISOString().split('T')[0];
+            const dayContent = mockScheduledContent[dateStr] || [];
+            
+            return (
+              <div key={index} className="p-3 border-r border-gray-200 last:border-r-0 min-h-full">
+                <div className="space-y-2">
+                  {dayContent.map((content) => (
+                    <motion.div
+                      key={content.id}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className={`p-2 rounded-lg border text-xs ${getStatusColor(content.status)}`}
+                    >
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-medium truncate">{content.title}</span>
+                        {getPlatformIcon(content.platform)}
                       </div>
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">{contact.name}</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{contact.email}</div>
-                    <div className="text-sm text-gray-500">{contact.phone}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                      contact.status === 'Customer' ? 'bg-green-100 text-green-800' :
-                      contact.status === 'Lead' ? 'bg-blue-100 text-blue-800' :
-                      'bg-yellow-100 text-yellow-800'
-                    }`}>
-                      {contact.status}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {contact.lastContact}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    {contact.value}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <div className="flex items-center space-x-2">
-                      <button className="text-blue-600 hover:text-blue-900">
-                        <Eye className="w-4 h-4" />
-                      </button>
-                      <button className="text-gray-600 hover:text-gray-900">
-                        <Edit className="w-4 h-4" />
-                      </button>
-                      <button className="text-red-600 hover:text-red-900">
-                        <Trash2 className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                      <div className="text-xs opacity-75">{content.time}</div>
+                    </motion.div>
+                  ))}
+                </div>
+                <button className="w-full mt-2 py-2 border-2 border-dashed border-gray-200 rounded-lg text-gray-400 hover:border-purple-300 hover:text-purple-600 transition-colors text-xs">
+                  + Add
+                </button>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Hugin Assistant Component (AI Chat)
+export const HuginAssistant = () => {
+  const [messages, setMessages] = useState([
+    {
+      id: 1,
+      type: 'assistant',
+      content: "Hello! I'm Hugin, your second brain assistant. I can help you summarize conversations, generate content ideas, and search through your saved items. What would you like to do?",
+      timestamp: new Date().toISOString()
+    }
+  ]);
+  const [inputMessage, setInputMessage] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+
+  const quickActions = [
+    { 
+      id: 'summarize', 
+      title: 'Summarize Conversation', 
+      description: 'Paste a conversation and get a summary',
+      icon: <MessageSquare className="w-5 h-5" />
+    },
+    { 
+      id: 'content-ideas', 
+      title: 'Generate Content Ideas', 
+      description: 'Get 3 post ideas based on a theme',
+      icon: <Sparkles className="w-5 h-5" />
+    },
+    { 
+      id: 'search', 
+      title: 'Search Saved Items', 
+      description: 'Find your saved conversations and content',
+      icon: <Search className="w-5 h-5" />
+    }
+  ];
+
+  const handleSendMessage = () => {
+    if (!inputMessage.trim()) return;
+
+    const newMessage = {
+      id: messages.length + 1,
+      type: 'user',
+      content: inputMessage,
+      timestamp: new Date().toISOString()
+    };
+
+    setMessages([...messages, newMessage]);
+    setInputMessage('');
+    setIsTyping(true);
+
+    // Simulate AI response
+    setTimeout(() => {
+      const aiResponse = {
+        id: messages.length + 2,
+        type: 'assistant',
+        content: getAIResponse(inputMessage),
+        timestamp: new Date().toISOString()
+      };
+      setMessages(prev => [...prev, aiResponse]);
+      setIsTyping(false);
+    }, 1500);
+  };
+
+  const getAIResponse = (message) => {
+    const lowerMessage = message.toLowerCase();
+    
+    if (lowerMessage.includes('summarize') || lowerMessage.includes('summary')) {
+      return "I'd be happy to help summarize a conversation! Please paste the conversation text, and I'll provide a concise summary with key points and actionable insights.";
+    } else if (lowerMessage.includes('content ideas') || lowerMessage.includes('post ideas')) {
+      return "Great! I can generate content ideas for you. Here are 3 post ideas based on productivity:\n\n1. **'5-Minute Morning Routine'** - Quick tips for starting the day productively\n2. **'Digital Declutter Challenge'** - Weekly challenge to organize digital workspace\n3. **'Productivity Myth Busting'** - Debunking common productivity misconceptions\n\nWould you like ideas for a specific theme or platform?";
+    } else if (lowerMessage.includes('search') || lowerMessage.includes('find')) {
+      return "I can help you search through your saved items! Here are some recent matches:\n\n• **Instagram conversation** with @sarah_marketing about collaboration (tagged: #networking)\n• **LinkedIn post draft** about AI tools (tagged: #ai-tools, #productivity)\n• **Content idea** for weekly newsletter (tagged: #newsletter)\n\nWhat specific topic or tag are you looking for?";
+    } else {
+      return "I understand you're looking for help with your content organization. I can assist with:\n\n• **Summarizing conversations** - Paste any conversation for a quick summary\n• **Generating content ideas** - Get tailored suggestions for any platform\n• **Searching saved items** - Find specific conversations or content by keywords\n\nWhat would you like to explore?";
+    }
+  };
+
+  const handleQuickAction = (actionId) => {
+    const actions = {
+      'summarize': "I'd like to summarize a conversation",
+      'content-ideas': "Can you give me 3 content ideas for LinkedIn?",
+      'search': "Help me search through my saved conversations"
+    };
+    
+    setInputMessage(actions[actionId]);
+  };
+
+  return (
+    <div className="p-6">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Hugin Assistant</h1>
+          <p className="text-gray-600">Your AI-powered content and conversation assistant</p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          <span className="text-sm text-gray-600">Online</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Quick Actions */}
+        <div className="bg-white rounded-xl shadow-sm border p-6">
+          <h3 className="font-semibold text-gray-900 mb-4">Quick Actions</h3>
+          <div className="space-y-3">
+            {quickActions.map((action) => (
+              <button
+                key={action.id}
+                onClick={() => handleQuickAction(action.id)}
+                className="w-full p-4 text-left rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors"
+              >
+                <div className="flex items-center space-x-3">
+                  <div className="text-purple-600">{action.icon}</div>
+                  <div>
+                    <div className="font-medium text-gray-900">{action.title}</div>
+                    <div className="text-sm text-gray-500">{action.description}</div>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Chat Interface */}
+        <div className="lg:col-span-2 bg-white rounded-xl shadow-sm border flex flex-col h-96">
+          <div className="p-4 border-b border-gray-200">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
+                <Bot className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <div className="font-semibold text-gray-900">Hugin Assistant</div>
+                <div className="text-sm text-gray-500">AI-powered helper</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+              >
+                <div
+                  className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                    message.type === 'user'
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-gray-100 text-gray-900'
+                  }`}
+                >
+                  <div className="text-sm whitespace-pre-wrap">{message.content}</div>
+                  <div className={`text-xs mt-1 ${message.type === 'user' ? 'text-purple-200' : 'text-gray-500'}`}>
+                    {new Date(message.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                  </div>
+                </div>
+              </div>
+            ))}
+            {isTyping && (
+              <div className="flex justify-start">
+                <div className="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg">
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="p-4 border-t border-gray-200">
+            <div className="flex space-x-2">
+              <input
+                type="text"
+                value={inputMessage}
+                onChange={(e) => setInputMessage(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                placeholder="Ask Hugin anything..."
+                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
+              <button
+                onClick={handleSendMessage}
+                disabled={!inputMessage.trim()}
+                className="bg-purple-600 hover:bg-purple-700 disabled:bg-gray-300 text-white px-4 py-2 rounded-lg transition-colors"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -722,14 +1197,15 @@ export const ContactsManagement = () => {
 const Components = {
   Header,
   HeroSection,
-  AwardsSection,
-  StatsSection,
   FeaturesSection,
   LoginForm,
   DashboardSidebar,
   DashboardHeader,
-  DashboardOverview,
-  ContactsManagement
+  HuginOverview,
+  ConversationsModule,
+  ContentBoard,
+  ContentCalendar,
+  HuginAssistant
 };
 
 export default Components;

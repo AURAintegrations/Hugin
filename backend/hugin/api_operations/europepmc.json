@@ -1,0 +1,58 @@
+{
+  "name": "hugin-europepmc",
+  "baseUrl": "https://www.ebi.ac.uk",
+  "description": "Bounded public metadata search; identity and relevance review required.",
+  "operations": [
+    {
+      "name": "search",
+      "request": {
+        "method": "GET",
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=AUTH_FULL%3A%22Example+Person%22&format=json&pageSize=3&resultType=core",
+        "headers": {
+          "accept": "application/json"
+        }
+      },
+      "slots": [
+        {
+          "param": "query",
+          "at": [
+            "query:query"
+          ]
+        }
+      ],
+      "volatile": [],
+      "trigger": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+      },
+      "match": {
+        "host": "www.ebi.ac.uk",
+        "path": "/europepmc/webservices/rest/search"
+      },
+      "response": {
+        "format": "json",
+        "extract": "resultList.result",
+        "pick": [
+          "id",
+          "source",
+          "title",
+          "authorList",
+          "firstPublicationDate",
+          "doi",
+          "pmcid"
+        ]
+      },
+      "params": [
+        {
+          "name": "query",
+          "type": "string",
+          "required": true,
+          "example": "AUTH:\"Person E\""
+        }
+      ],
+      "readOnly": true,
+      "minTier": 1,
+      "learnedLoggedIn": false,
+      "learnedAt": "2026-10-13T14:13:25.663Z"
+    }
+  ]
+}

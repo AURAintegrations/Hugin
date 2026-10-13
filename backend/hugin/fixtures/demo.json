@@ -1,0 +1,88 @@
+{
+  "label": "Synthetic fixture. No real people, research or Dex responses.",
+  "contacts": [
+    {
+      "id": "fixture-alex",
+      "first_name": "Alex",
+      "last_name": "River",
+      "company": "Example Robotics",
+      "job_title": "Founder",
+      "linkedin": "https://www.linkedin.com/in/fixture-alex-river",
+      "website": "https://example.org/team/alex",
+      "contact_emails": [
+        {
+          "email": "alex@example.org"
+        }
+      ],
+      "description": "Existing private fixture note, preserved.",
+      "related_contacts": [
+        "fixture-jamie-one"
+      ]
+    },
+    {
+      "id": "fixture-jamie-one",
+      "first_name": "Jamie",
+      "last_name": "Vale",
+      "company": "Example Robotics",
+      "website": "https://example.org/team/jamie"
+    },
+    {
+      "id": "fixture-jamie-two",
+      "first_name": "Jamie",
+      "last_name": "Vale",
+      "company": "Different Example Ltd"
+    }
+  ],
+  "research": {},
+  "pages": {
+    "https://example.org/team/alex": "<html><head><script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Alex River\",\"jobTitle\":\"Founder\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"Example Robotics\"},\"sameAs\":[\"https://www.linkedin.com/in/fixture-alex-river\"],\"url\":\"https://example.org/team/alex\",\"description\":\"Alex builds warehouse robotics and publishes engineering notes.\",\"email\":\"new-address@example.org\",\"dateModified\":\"2026-09-01\",\"knows\":[{\"@type\":\"Person\",\"name\":\"Jamie Vale\",\"url\":\"https://example.org/team/jamie\"}]}</script></head><body><article><h1>Alex River</h1><p>Alex River is the founder of Example Robotics, working on warehouse robotics.</p></article></body></html>",
+    "https://example.net/wrong-alex": "<html><script type=\"application/ld+json\">{\"@type\":\"Person\",\"name\":\"Alex Stone\",\"jobTitle\":\"Investor\",\"worksFor\":{\"name\":\"Different Company\"}}</script><body>Alex Stone is a different person.</body></html>"
+  },
+  "search_urls": [
+    "https://example.org/team/alex"
+  ],
+  "api_anything": {
+    "openalex": {
+      "results": [
+        {
+          "id": "https://openalex.org/A123",
+          "display_name": "Alex River",
+          "last_known_institutions": [
+            {
+              "display_name": "Example Robotics"
+            }
+          ]
+        }
+      ]
+    },
+    "europepmc": {
+      "resultList": {
+        "result": [
+          {
+            "id": "123",
+            "source": "MED",
+            "title": "Synthetic warehouse safety study",
+            "authorList": {
+              "author": [
+                {
+                  "firstName": "Alex",
+                  "lastName": "River"
+                }
+              ]
+            },
+            "firstPublicationDate": "2026-09-02"
+          }
+        ]
+      }
+    },
+    "industry_news": {
+      "hits": [
+        {
+          "title": "Example Robotics announces a synthetic distributor program",
+          "objectID": "1234",
+          "created_at": "2026-09-03T01:00:00Z"
+        }
+      ]
+    }
+  }
+}

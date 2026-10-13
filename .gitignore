@@ -77,4 +77,16 @@ agenthub/agents/youtube/db
 .cache/
 
 # Mobile development
-android-sdk/ 
+android-sdk/
+# Private configuration and contact/research data
+.env
+.env.*
+!.env.example
+.data/
+.pytest_cache/
+frontend/build/
+*.egg-info/
+# A retained local virtualenv may be a symlink in cloud snapshots.
+.venv
+*linkedin*session*.json
+*storage-state*.json

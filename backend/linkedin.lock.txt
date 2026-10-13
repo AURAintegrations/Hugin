@@ -1,0 +1,18 @@
+# Isolated parser runtime; pinned upstream revision, root LICENSE is GPLv3.
+linkedin_scraper @ git+https://github.com/joeyism/linkedin_scraper.git@b1cdc1c0e85bee8764d62565d229c682e5eb81bb
+aiofiles==25.1.0
+annotated-types==0.8.0
+certifi==2026.7.22
+charset-normalizer==3.5.2
+greenlet==3.5.6
+idna==3.20
+lxml==6.1.3
+playwright==1.63.0
+pydantic==2.13.5
+pydantic_core==2.46.5
+pyee==13.0.1
+python-dotenv==1.2.4
+requests==2.34.2
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+urllib3==2.8.0

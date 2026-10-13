@@ -1,0 +1,56 @@
+{
+  "name": "hugin-industry-news",
+  "baseUrl": "https://hn.algolia.com",
+  "description": "Bounded public metadata search; identity and relevance review required.",
+  "operations": [
+    {
+      "name": "search",
+      "request": {
+        "method": "GET",
+        "url": "https://hn.algolia.com/api/v1/search?query=Example+Company&tags=story&hitsPerPage=3",
+        "headers": {
+          "accept": "application/json"
+        }
+      },
+      "slots": [
+        {
+          "param": "query",
+          "at": [
+            "query:query"
+          ]
+        }
+      ],
+      "volatile": [],
+      "trigger": {
+        "url": "https://hn.algolia.com/api/v1/search"
+      },
+      "match": {
+        "host": "hn.algolia.com",
+        "path": "/api/v1/search"
+      },
+      "response": {
+        "format": "json",
+        "extract": "hits",
+        "pick": [
+          "title",
+          "url",
+          "objectID",
+          "author",
+          "created_at"
+        ]
+      },
+      "params": [
+        {
+          "name": "query",
+          "type": "string",
+          "required": true,
+          "example": "Example Company"
+        }
+      ],
+      "readOnly": true,
+      "minTier": 1,
+      "learnedLoggedIn": false,
+      "learnedAt": "2026-10-13T14:13:26.874Z"
+    }
+  ]
+}

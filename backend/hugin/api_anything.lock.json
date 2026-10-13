@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "revision": "0b556c36932b111ee8840c412008261abe717725",
+  "sdk_version": "1.31.0",
+  "files": {
+    "dist/browser.js": "603ae90a3324a87595a33d61d0f88780f85c1e010fc17e071285f6e34c8caa6d",
+    "dist/classify.js": "0582edd018fab3b908a10bab55de2ca7fab5c096c430bbcbae11142b21fc1f86",
+    "dist/cli.js": "bd40773d989c4207426ba5877917c4008ac20772b5c1e6688e8f0292724a0c67",
+    "dist/codec.js": "50235b93e0a7f6584fbd213f46620b2da45a37f7d6478be759a73cb9d002d3be",
+    "dist/execute.js": "64d28a360e25465278104d8e3efe338b865ead57aee724f31caea20eb219c337",
+    "dist/extract.js": "bd986142d9d4ca7e779ce7be1c0758aa8f18038b86d305cd12bf9977d832bd24",
+    "dist/heal.js": "e9aa5b23c00296ecc8a7e966112fd26757054aff45346c02d7d956cca78ca615",
+    "dist/http.js": "f695ec479c8f83f563c403014ce3a1ffa3e83b372fb27e706bd655aa8ba86b39",
+    "dist/import.js": "63488220259848e8c552f526e5563f391ce121748928afd2eef95fd81f1f2268",
+    "dist/index.js": "06a8dce408045b4fb3f8d2076630aec9d029c673560fde98a91af60507e5d16b",
+    "dist/learn.js": "6f8bbc2397a519fc317f7de7c550725c58ee8e6a308eb8759f6b8fb937e2a4ab",
+    "dist/login.js": "91ba20a001f651b366d4fea113eb06fc4891f8a85385286cf9c33bab97db36d7",
+    "dist/mcp.js": "fef6733b14f6b6ce5b1eb2c07a8c0d594dca13cfa0cb7b35cb9ecfec78034f43",
+    "dist/outline.js": "1169ee3a94fa7ee48406fcb131e41a018e0c77a5f43ed312d5322522cd8a7eae",
+    "dist/session.js": "51d8bcfc820fe63c10b159130a532193b8e5b7c40ddbb17c4cbd0b2326d0712c",
+    "dist/spec.js": "b7369ea6b50e225a1716a00a7e5dfe86a4f1610d0b4a3bfde2355e45f85fa0c2",
+    "dist/store.js": "1bde0a5211c6e7b81e986d402ee88800b9611abbbc0070d4d70d8b190546b310",
+    "dist/types.js": "cabe5d01ac4b7211482a5c586e910c16dc13e109447f591c5e31eaf77eaacbf5"
+  }
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hugin-contact-intelligence"
+version = "1.0.0"
+description = "Local contact research and verified Dex writeback"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[project.scripts]
+hugin = "hugin.cli:app"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["hugin*"]
+
+[tool.setuptools.package-data]
+hugin = ["fixtures/*.json", "ftm_schema/*", "api_operations/*.json", "api_anything.lock.json", "api_anything_worker.mjs"]

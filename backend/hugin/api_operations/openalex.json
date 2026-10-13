@@ -1,0 +1,56 @@
+{
+  "name": "hugin-openalex",
+  "baseUrl": "https://api.openalex.org",
+  "description": "Bounded public metadata search; identity and relevance review required.",
+  "operations": [
+    {
+      "name": "search",
+      "request": {
+        "method": "GET",
+        "url": "https://api.openalex.org/authors?search=Example+Person&per-page=3",
+        "headers": {
+          "accept": "application/json"
+        }
+      },
+      "slots": [
+        {
+          "param": "query",
+          "at": [
+            "query:search"
+          ]
+        }
+      ],
+      "volatile": [],
+      "trigger": {
+        "url": "https://api.openalex.org/authors"
+      },
+      "match": {
+        "host": "api.openalex.org",
+        "path": "/authors"
+      },
+      "response": {
+        "format": "json",
+        "extract": "results",
+        "pick": [
+          "id",
+          "display_name",
+          "orcid",
+          "works_count",
+          "last_known_institutions"
+        ]
+      },
+      "params": [
+        {
+          "name": "query",
+          "type": "string",
+          "required": true,
+          "example": "Example Person"
+        }
+      ],
+      "readOnly": true,
+      "minTier": 1,
+      "learnedLoggedIn": false,
+      "learnedAt": "2026-10-13T14:13:22.824Z"
+    }
+  ]
+}

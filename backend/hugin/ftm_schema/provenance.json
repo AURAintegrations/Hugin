@@ -1,0 +1,6 @@
+{
+  "source": "https://pypi.org/project/followthemoney/4.11.0/",
+  "version": "4.11.0",
+  "artifact_sha256": "9bd561e3ce1fce7eb325c5ae7f14a19eeaf7054537ea88b699065f2830af4259",
+  "usage": "Selected upstream schemas adapted into the existing Pydantic/Mongo stack; full FtM runtime not installed."
+}
